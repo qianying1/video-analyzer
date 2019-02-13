@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gzsendi.mapper.ejb3.NagiosDataAnalyzeRuleMapper">
+
+    <resultMap id="NagiosDataAnalyzeRule" type="cn.gzsendi.model.nagios.NagiosDataAnalyzeRule" >
+        <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="match_expression" property="matchExpression" />
+        <result column="value_extract_expression" property="valueExtractExpression" />
+        <result column="collect_index_id" property="collectIndexId" />
+        <result column="status" property="status" />
+        <result column="comment" property="comment" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        `id`,
+        `name`,
+        `match_expression`,
+        `value_extract_expression`,
+        `collect_index_id`,
+        `status`,
+        `comment`
+    </sql>
+
+    <insert id="insertRule" parameterType="java.util.Map" >
+        INSERT INTO nagios_data_analyze_rule (
+        `id`,
+        `name`,
+        `match_expression`,
+        `value_extract_expression`,
+        `collect_index_id`,
+        `status`,
+        `comment`
+        )
+        VALUES(
+        #{nagiosDataAnalyzeRule.id},
+        #{nagiosDataAnalyzeRule.name},
+        #{nagiosDataAnalyzeRule.matchExpression},
+        #{nagiosDataAnalyzeRule.valueExtractExpression},
+        #{nagiosDataAnalyzeRule.collectIndexId},
+        #{nagiosDataAnalyzeRule.status},
+        #{nagiosDataAnalyzeRule.comment}
+        )
+    </insert>
+
+    <delete id="deleteRule" parameterType="java.util.Map" >
+        DELETE FROM nagios_data_analyze_rule
+        WHERE `id` = #{id}
+    </delete>
+
+    <update id="updateRule" parameterType="java.util.Map" >
+        UPDATE nagios_data_analyze_rule
+        SET
+        id = #{nagiosDataAnalyzeRule.id},
+        name = #{nagiosDataAnalyzeRule.name},
+        match_expression = #{nagiosDataAnalyzeRule.matchExpression},
+        value_extract_expression = #{nagiosDataAnalyzeRule.valueExtractExpression},
+        collect_index_id = #{nagiosDataAnalyzeRule.collectIndexId},
+        status = #{nagiosDataAnalyzeRule.status},
+        comment = #{nagiosDataAnalyzeRule.comment},
+        UpdateTime = NOW()
+        WHERE `id` = #{nagiosDataAnalyzeRule.id}
+    </update>
+
+
+    <select id="getRule" parameterType="java.util.Map" resultMap="NagiosDataAnalyzeRule">
+        SELECT <include refid="Base_Column_List" />
+        FROM nagios_data_analyze_rule
+        WHERE `id` = #{id}
+    </select>
+    <select id="listRules" parameterType="java.util.Map" resultMap="NagiosDataAnalyzeRule">
+        SELECT <include refid="Base_Column_List" />
+        FROM nagios_data_analyze_rule where status = 1
+    </select>
+
+</mapper>
+

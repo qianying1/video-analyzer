@@ -1,0 +1,66 @@
+#spring.datasource.nagios.url=jdbc:mysql://192.168.63.100:3306/nagios?useAffectedRows=true&zeroDateTimeBehavior=convertToNull
+spring.datasource:
+#------------------------------网管nagios库数据源配置------------------------------
+  nagios:
+    url: jdbc:mysql://localhost:3306/nagios?useAffectedRows=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  ##------------------------------网管ejb3库数据源配置------------------------------
+  ejb3:
+    url: jdbc:mysql://localhost:3306/ejb3?useAffectedRows=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  ##------------------------------网管sendinmdb库数据源配置------------------------------
+  sendinmdb:
+    url: jdbc:mysql://localhost:3306/sendinmdb?useAffectedRows=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  ##------------------------------用户token功能记住存储------------------------------
+  user_token:
+      url: jdbc:mysql://localhost:3306/user_token?useAffectedRows=true&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+  ##------------------------------工作流activity------------------------------
+  activity:
+      url: jdbc:mysql://localhost:3306/activity?useAffectedRows=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+  initialize: false
+  max-idle: 15
+  max-wait: 10000
+  min-idle: 5
+
+http-pool:
+  max-total: 200
+  default-max-per-route: 100
+  connect-timeout: 5000
+  connection-request-timeout: 1000
+  socket-timeout: 600000
+  validate-after-inactivity: 2000
+
+runtime.cache.file.absolute.path: /Users/nacht/Documents/sendi/bussinessNM/nagios/nagios/src/main/resources/runtimeCache.properties
+mybatis.configuration.log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+server:
+  port: 8090
+  context-path: /bilibili
+#  ssl:
+#    key-alias: tomcat
+#    key-store: classpath:keystore.p12
+#    key-store-type: PKCS12
+#    key-password: changeit
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    mode: LEGACYHTML5
+    cache: false
+    content-type: text/html
+    suffix: .html
+  activiti:
+    process-definition-location-prefix: classpath:/processes
+

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gzsendi.mapper.nagios.ServiceCheckMapper">
+
+    <resultMap id="NagiosServicechecks" type="cn.gzsendi.model.nagios.NagiosServiceCheck">
+        <result column="servicecheck_id" property="serviceCheckId"/>
+        <result column="instance_id" property="instanceId"/>
+        <result column="service_object_id" property="serviceObjectId"/>
+        <result column="check_type" property="checkType"/>
+        <result column="current_check_attempt" property="currentCheckAttempt"/>
+        <result column="max_check_attempts" property="maxCheckAttempts"/>
+        <result column="state" property="state"/>
+        <result column="state_type" property="stateType"/>
+        <result column="start_time" property="startTime"/>
+        <result column="start_time_usec" property="startTimeUsec"/>
+        <result column="end_time" property="endTime"/>
+        <result column="end_time_usec" property="endTimeUsec"/>
+        <result column="command_object_id" property="commandObjectId"/>
+        <result column="command_args" property="commandArgs"/>
+        <result column="command_line" property="commandLine"/>
+        <result column="timeout" property="timeout"/>
+        <result column="early_timeout" property="earlyTimeout"/>
+        <result column="execution_time" property="executionTime"/>
+        <result column="latency" property="latency"/>
+        <result column="return_code" property="returnCode"/>
+        <result column="output" property="output"/>
+        <result column="long_output" property="longOutput"/>
+        <result column="perfdata" property="perfdata"/>
+        <result column="alias" property="hostName"/>
+        <result column="address" property="hostIp"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        nagios_servicechecks.servicecheck_id,
+        nagios_servicechecks.instance_id,
+        nagios_servicechecks.service_object_id,
+        nagios_servicechecks.check_type,
+        nagios_servicechecks.current_check_attempt,
+        nagios_servicechecks.max_check_attempts,
+        nagios_servicechecks.state,
+        nagios_servicechecks.state_type,
+        nagios_servicechecks.start_time,
+        nagios_servicechecks.start_time_usec,
+        nagios_servicechecks.end_time,
+        nagios_servicechecks.end_time_usec,
+        nagios_servicechecks.command_object_id,
+        nagios_servicechecks.command_args,
+        nagios_servicechecks.command_line,
+        nagios_servicechecks.timeout,
+        nagios_servicechecks.early_timeout,
+        nagios_servicechecks.execution_time,
+        nagios_servicechecks.latency,
+        nagios_servicechecks.return_code,
+        nagios_servicechecks.output,
+        nagios_servicechecks.long_output,
+        nagios_servicechecks.perfdata
+    </sql>
+
+    <insert id="insert" parameterType="java.util.Map">
+        INSERT INTO nagios_servicechecks (
+        `servicecheck_id`,
+        `instance_id`,
+        `service_object_id`,
+        `check_type`,
+        `current_check_attempt`,
+        `max_check_attempts`,
+        `state`,
+        `state_type`,
+        `start_time`,
+        `start_time_usec`,
+        `end_time`,
+        `end_time_usec`,
+        `command_object_id`,
+        `command_args`,
+        `command_line`,
+        `timeout`,
+        `early_timeout`,
+        `execution_time`,
+        `latency`,
+        `return_code`,
+        `output`,
+        `long_output`,
+        `perfdata`
+        )
+        VALUES(
+        #{nagiosServicechecks.servicecheckId},
+        #{nagiosServicechecks.instanceId},
+        #{nagiosServicechecks.serviceObjectId},
+        #{nagiosServicechecks.checkType},
+        #{nagiosServicechecks.currentCheckAttempt},
+        #{nagiosServicechecks.maxCheckAttempts},
+        #{nagiosServicechecks.state},
+        #{nagiosServicechecks.stateType},
+        #{nagiosServicechecks.startTime},
+        #{nagiosServicechecks.startTimeUsec},
+        #{nagiosServicechecks.endTime},
+        #{nagiosServicechecks.endTimeUsec},
+        #{nagiosServicechecks.commandObjectId},
+        #{nagiosServicechecks.commandArgs},
+        #{nagiosServicechecks.commandLine},
+        #{nagiosServicechecks.timeout},
+        #{nagiosServicechecks.earlyTimeout},
+        #{nagiosServicechecks.executionTime},
+        #{nagiosServicechecks.latency},
+        #{nagiosServicechecks.returnCode},
+        #{nagiosServicechecks.output},
+        #{nagiosServicechecks.longOutput},
+        #{nagiosServicechecks.perfdata}
+        )
+    </insert>
+
+    <delete id="delete" parameterType="java.util.Map">
+        DELETE FROM nagios_servicechecks
+        WHERE `id` = #{id}
+    </delete>
+
+    <update id="update" parameterType="java.util.Map">
+        UPDATE nagios_servicechecks
+        SET
+        servicecheck_id = #{nagiosServicechecks.servicecheckId},
+        instance_id = #{nagiosServicechecks.instanceId},
+        service_object_id = #{nagiosServicechecks.serviceObjectId},
+        check_type = #{nagiosServicechecks.checkType},
+        current_check_attempt = #{nagiosServicechecks.currentCheckAttempt},
+        max_check_attempts = #{nagiosServicechecks.maxCheckAttempts},
+        state = #{nagiosServicechecks.state},
+        state_type = #{nagiosServicechecks.stateType},
+        start_time = #{nagiosServicechecks.startTime},
+        start_time_usec = #{nagiosServicechecks.startTimeUsec},
+        end_time = #{nagiosServicechecks.endTime},
+        end_time_usec = #{nagiosServicechecks.endTimeUsec},
+        command_object_id = #{nagiosServicechecks.commandObjectId},
+        command_args = #{nagiosServicechecks.commandArgs},
+        command_line = #{nagiosServicechecks.commandLine},
+        timeout = #{nagiosServicechecks.timeout},
+        early_timeout = #{nagiosServicechecks.earlyTimeout},
+        execution_time = #{nagiosServicechecks.executionTime},
+        latency = #{nagiosServicechecks.latency},
+        return_code = #{nagiosServicechecks.returnCode},
+        output = #{nagiosServicechecks.output},
+        long_output = #{nagiosServicechecks.longOutput},
+        perfdata = #{nagiosServicechecks.perfdata},
+        UpdateTime = NOW()
+        WHERE `servicecheck_id` = #{nagiosServicechecks.servicecheck_id}
+    </update>
+
+
+    <select id="getServiceCheck" parameterType="java.util.Map" resultMap="NagiosServicechecks">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM nagios_servicechecks
+        WHERE `servicecheck_id` = #{id}
+    </select>
+
+    <select id="listServiceChecks" parameterType="java.util.Map" resultMap="NagiosServicechecks">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM nagios_servicechecks
+    </select>
+    <select id="listServiceChecksByDate" resultMap="NagiosServicechecks">
+        SELECT
+        <include refid="Base_Column_List"/>
+        ,nagios_hosts.alias
+        ,nagios_hosts.address
+        <![CDATA[
+           FROM nagios_servicechecks
+	       JOIN nagios_objects object1 ON nagios_servicechecks.service_object_id = object1.object_id
+	       JOIN nagios_services ON nagios_services.service_object_id = object1.object_id
+           JOIN nagios_objects object2 ON nagios_services.host_object_id = object2.object_id
+	       JOIN nagios_hosts ON nagios_hosts.host_object_id = object2.object_id
+        WHERE end_time > #{beginDate} AND end_time < #{endDate}
+        ]]>
+    </select>
+    <!-- 查询大于最后一次查询id的数据 -->
+    <select id="listServiceChecksByLastQueryId" resultMap="NagiosServicechecks">
+        SELECT
+        <include refid="Base_Column_List"/>
+        ,nagios_hosts.alias
+        ,nagios_hosts.address
+        <![CDATA[
+        FROM nagios_servicechecks
+	       JOIN nagios_objects object1 ON nagios_servicechecks.service_object_id = object1.object_id
+	       JOIN nagios_services ON nagios_services.service_object_id = object1.object_id
+           JOIN nagios_objects object2 ON nagios_services.host_object_id = object2.object_id
+	       JOIN nagios_hosts ON nagios_hosts.host_object_id = object2.object_id
+         WHERE nagios_servicechecks.servicecheck_id > #{id}
+        ]]>
+    </select>
+
+</mapper>
+

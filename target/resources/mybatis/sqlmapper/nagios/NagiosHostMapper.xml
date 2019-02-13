@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gzsendi.mapper.nagios.NagiosHostMapper">
+
+    <resultMap id="NagiosHosts" type="cn.gzsendi.model.nagios.NagiosHost" >
+        <result column="host_id" property="hostId" />
+        <result column="instance_id" property="instanceId" />
+        <result column="config_type" property="configType" />
+        <result column="host_object_id" property="hostObjectId" />
+        <result column="alias" property="alias" />
+        <result column="display_name" property="displayName" />
+        <result column="address" property="address" />
+        <result column="check_command_object_id" property="checkCommandObjectId" />
+        <result column="check_command_args" property="checkCommandArgs" />
+        <result column="eventhandler_command_object_id" property="eventhandlerCommandObjectId" />
+        <result column="eventhandler_command_args" property="eventhandlerCommandArgs" />
+        <result column="notification_timeperiod_object_id" property="notificationTimeperiodObjectId" />
+        <result column="check_timeperiod_object_id" property="checkTimeperiodObjectId" />
+        <result column="failure_prediction_options" property="failurePredictionOptions" />
+        <result column="check_interval" property="checkInterval" />
+        <result column="retry_interval" property="retryInterval" />
+        <result column="max_check_attempts" property="maxCheckAttempts" />
+        <result column="first_notification_delay" property="firstNotificationDelay" />
+        <result column="notification_interval" property="notificationInterval" />
+        <result column="notify_on_down" property="notifyOnDown" />
+        <result column="notify_on_unreachable" property="notifyOnUnreachable" />
+        <result column="notify_on_recovery" property="notifyOnRecovery" />
+        <result column="notify_on_flapping" property="notifyOnFlapping" />
+        <result column="notify_on_downtime" property="notifyOnDowntime" />
+        <result column="stalk_on_up" property="stalkOnUp" />
+        <result column="stalk_on_down" property="stalkOnDown" />
+        <result column="stalk_on_unreachable" property="stalkOnUnreachable" />
+        <result column="flap_detection_enabled" property="flapDetectionEnabled" />
+        <result column="flap_detection_on_up" property="flapDetectionOnUp" />
+        <result column="flap_detection_on_down" property="flapDetectionOnDown" />
+        <result column="flap_detection_on_unreachable" property="flapDetectionOnUnreachable" />
+        <result column="low_flap_threshold" property="lowFlapThreshold" />
+        <result column="high_flap_threshold" property="highFlapThreshold" />
+        <result column="process_performance_data" property="processPerformanceData" />
+        <result column="freshness_checks_enabled" property="freshnessChecksEnabled" />
+        <result column="freshness_threshold" property="freshnessThreshold" />
+        <result column="passive_checks_enabled" property="passiveChecksEnabled" />
+        <result column="event_handler_enabled" property="eventHandlerEnabled" />
+        <result column="active_checks_enabled" property="activeChecksEnabled" />
+        <result column="retain_status_information" property="retainStatusInformation" />
+        <result column="retain_nonstatus_information" property="retainNonstatusInformation" />
+        <result column="notifications_enabled" property="notificationsEnabled" />
+        <result column="obsess_over_host" property="obsessOverHost" />
+        <result column="failure_prediction_enabled" property="failurePredictionEnabled" />
+        <result column="notes" property="notes" />
+        <result column="notes_url" property="notesUrl" />
+        <result column="action_url" property="actionUrl" />
+        <result column="icon_image" property="iconImage" />
+        <result column="icon_image_alt" property="iconImageAlt" />
+        <result column="vrml_image" property="vrmlImage" />
+        <result column="statusmap_image" property="statusmapImage" />
+        <result column="have_2d_coords" property="have2dCoords" />
+        <result column="x_2d" property="x2d" />
+        <result column="y_2d" property="y2d" />
+        <result column="have_3d_coords" property="have3dCoords" />
+        <result column="x_3d" property="x3d" />
+        <result column="y_3d" property="y3d" />
+        <result column="z_3d" property="z3d" />
+        <result column="config_type" property="configType" />
+        <result column="host_object_id" property="hostObjectId" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        `host_id`,
+        `instance_id`,
+        `config_type`,
+        `host_object_id`,
+        `alias`,
+        `display_name`,
+        `address`,
+        `check_command_object_id`,
+        `check_command_args`,
+        `eventhandler_command_object_id`,
+        `eventhandler_command_args`,
+        `notification_timeperiod_object_id`,
+        `check_timeperiod_object_id`,
+        `failure_prediction_options`,
+        `check_interval`,
+        `retry_interval`,
+        `max_check_attempts`,
+        `first_notification_delay`,
+        `notification_interval`,
+        `notify_on_down`,
+        `notify_on_unreachable`,
+        `notify_on_recovery`,
+        `notify_on_flapping`,
+        `notify_on_downtime`,
+        `stalk_on_up`,
+        `stalk_on_down`,
+        `stalk_on_unreachable`,
+        `flap_detection_enabled`,
+        `flap_detection_on_up`,
+        `flap_detection_on_down`,
+        `flap_detection_on_unreachable`,
+        `low_flap_threshold`,
+        `high_flap_threshold`,
+        `process_performance_data`,
+        `freshness_checks_enabled`,
+        `freshness_threshold`,
+        `passive_checks_enabled`,
+        `event_handler_enabled`,
+        `active_checks_enabled`,
+        `retain_status_information`,
+        `retain_nonstatus_information`,
+        `notifications_enabled`,
+        `obsess_over_host`,
+        `failure_prediction_enabled`,
+        `notes`,
+        `notes_url`,
+        `action_url`,
+        `icon_image`,
+        `icon_image_alt`,
+        `vrml_image`,
+        `statusmap_image`,
+        `have_2d_coords`,
+        `x_2d`,
+        `y_2d`,
+        `have_3d_coords`,
+        `x_3d`,
+        `y_3d`,
+        `z_3d`,
+        `config_type`,
+        `host_object_id`
+    </sql>
+
+    <insert id="insertHost" parameterType="java.util.Map" >
+        INSERT INTO nagios_hosts (
+        `host_id`,
+        `instance_id`,
+        `config_type`,
+        `host_object_id`,
+        `alias`,
+        `display_name`,
+        `address`,
+        `check_command_object_id`,
+        `check_command_args`,
+        `eventhandler_command_object_id`,
+        `eventhandler_command_args`,
+        `notification_timeperiod_object_id`,
+        `check_timeperiod_object_id`,
+        `failure_prediction_options`,
+        `check_interval`,
+        `retry_interval`,
+        `max_check_attempts`,
+        `first_notification_delay`,
+        `notification_interval`,
+        `notify_on_down`,
+        `notify_on_unreachable`,
+        `notify_on_recovery`,
+        `notify_on_flapping`,
+        `notify_on_downtime`,
+        `stalk_on_up`,
+        `stalk_on_down`,
+        `stalk_on_unreachable`,
+        `flap_detection_enabled`,
+        `flap_detection_on_up`,
+        `flap_detection_on_down`,
+        `flap_detection_on_unreachable`,
+        `low_flap_threshold`,
+        `high_flap_threshold`,
+        `process_performance_data`,
+        `freshness_checks_enabled`,
+        `freshness_threshold`,
+        `passive_checks_enabled`,
+        `event_handler_enabled`,
+        `active_checks_enabled`,
+        `retain_status_information`,
+        `retain_nonstatus_information`,
+        `notifications_enabled`,
+        `obsess_over_host`,
+        `failure_prediction_enabled`,
+        `notes`,
+        `notes_url`,
+        `action_url`,
+        `icon_image`,
+        `icon_image_alt`,
+        `vrml_image`,
+        `statusmap_image`,
+        `have_2d_coords`,
+        `x_2d`,
+        `y_2d`,
+        `have_3d_coords`,
+        `x_3d`,
+        `y_3d`,
+        `z_3d`,
+        `config_type`,
+        `host_object_id`
+        )
+        VALUES(
+        #{nagiosHosts.hostId},
+        #{nagiosHosts.instanceId},
+        #{nagiosHosts.configType},
+        #{nagiosHosts.hostObjectId},
+        #{nagiosHosts.alias},
+        #{nagiosHosts.displayName},
+        #{nagiosHosts.address},
+        #{nagiosHosts.checkCommandObjectId},
+        #{nagiosHosts.checkCommandArgs},
+        #{nagiosHosts.eventhandlerCommandObjectId},
+        #{nagiosHosts.eventhandlerCommandArgs},
+        #{nagiosHosts.notificationTimeperiodObjectId},
+        #{nagiosHosts.checkTimeperiodObjectId},
+        #{nagiosHosts.failurePredictionOptions},
+        #{nagiosHosts.checkInterval},
+        #{nagiosHosts.retryInterval},
+        #{nagiosHosts.maxCheckAttempts},
+        #{nagiosHosts.firstNotificationDelay},
+        #{nagiosHosts.notificationInterval},
+        #{nagiosHosts.notifyOnDown},
+        #{nagiosHosts.notifyOnUnreachable},
+        #{nagiosHosts.notifyOnRecovery},
+        #{nagiosHosts.notifyOnFlapping},
+        #{nagiosHosts.notifyOnDowntime},
+        #{nagiosHosts.stalkOnUp},
+        #{nagiosHosts.stalkOnDown},
+        #{nagiosHosts.stalkOnUnreachable},
+        #{nagiosHosts.flapDetectionEnabled},
+        #{nagiosHosts.flapDetectionOnUp},
+        #{nagiosHosts.flapDetectionOnDown},
+        #{nagiosHosts.flapDetectionOnUnreachable},
+        #{nagiosHosts.lowFlapThreshold},
+        #{nagiosHosts.highFlapThreshold},
+        #{nagiosHosts.processPerformanceData},
+        #{nagiosHosts.freshnessChecksEnabled},
+        #{nagiosHosts.freshnessThreshold},
+        #{nagiosHosts.passiveChecksEnabled},
+        #{nagiosHosts.eventHandlerEnabled},
+        #{nagiosHosts.activeChecksEnabled},
+        #{nagiosHosts.retainStatusInformation},
+        #{nagiosHosts.retainNonstatusInformation},
+        #{nagiosHosts.notificationsEnabled},
+        #{nagiosHosts.obsessOverHost},
+        #{nagiosHosts.failurePredictionEnabled},
+        #{nagiosHosts.notes},
+        #{nagiosHosts.notesUrl},
+        #{nagiosHosts.actionUrl},
+        #{nagiosHosts.iconImage},
+        #{nagiosHosts.iconImageAlt},
+        #{nagiosHosts.vrmlImage},
+        #{nagiosHosts.statusmapImage},
+        #{nagiosHosts.have2dCoords},
+        #{nagiosHosts.x2d},
+        #{nagiosHosts.y2d},
+        #{nagiosHosts.have3dCoords},
+        #{nagiosHosts.x3d},
+        #{nagiosHosts.y3d},
+        #{nagiosHosts.z3d},
+        #{nagiosHosts.configType},
+        #{nagiosHosts.hostObjectId}
+        )
+    </insert>
+
+    <delete id="deleteHost" parameterType="java.util.Map" >
+        DELETE FROM nagios_hosts
+        WHERE `id` = #{id}
+    </delete>
+
+    <update id="updateHost" parameterType="java.util.Map" >
+        UPDATE nagios_hosts
+        SET
+        host_id = #{nagiosHosts.hostId},
+        instance_id = #{nagiosHosts.instanceId},
+        config_type = #{nagiosHosts.configType},
+        host_object_id = #{nagiosHosts.hostObjectId},
+        alias = #{nagiosHosts.alias},
+        display_name = #{nagiosHosts.displayName},
+        address = #{nagiosHosts.address},
+        check_command_object_id = #{nagiosHosts.checkCommandObjectId},
+        check_command_args = #{nagiosHosts.checkCommandArgs},
+        eventhandler_command_object_id = #{nagiosHosts.eventhandlerCommandObjectId},
+        eventhandler_command_args = #{nagiosHosts.eventhandlerCommandArgs},
+        notification_timeperiod_object_id = #{nagiosHosts.notificationTimeperiodObjectId},
+        check_timeperiod_object_id = #{nagiosHosts.checkTimeperiodObjectId},
+        failure_prediction_options = #{nagiosHosts.failurePredictionOptions},
+        check_interval = #{nagiosHosts.checkInterval},
+        retry_interval = #{nagiosHosts.retryInterval},
+        max_check_attempts = #{nagiosHosts.maxCheckAttempts},
+        first_notification_delay = #{nagiosHosts.firstNotificationDelay},
+        notification_interval = #{nagiosHosts.notificationInterval},
+        notify_on_down = #{nagiosHosts.notifyOnDown},
+        notify_on_unreachable = #{nagiosHosts.notifyOnUnreachable},
+        notify_on_recovery = #{nagiosHosts.notifyOnRecovery},
+        notify_on_flapping = #{nagiosHosts.notifyOnFlapping},
+        notify_on_downtime = #{nagiosHosts.notifyOnDowntime},
+        stalk_on_up = #{nagiosHosts.stalkOnUp},
+        stalk_on_down = #{nagiosHosts.stalkOnDown},
+        stalk_on_unreachable = #{nagiosHosts.stalkOnUnreachable},
+        flap_detection_enabled = #{nagiosHosts.flapDetectionEnabled},
+        flap_detection_on_up = #{nagiosHosts.flapDetectionOnUp},
+        flap_detection_on_down = #{nagiosHosts.flapDetectionOnDown},
+        flap_detection_on_unreachable = #{nagiosHosts.flapDetectionOnUnreachable},
+        low_flap_threshold = #{nagiosHosts.lowFlapThreshold},
+        high_flap_threshold = #{nagiosHosts.highFlapThreshold},
+        process_performance_data = #{nagiosHosts.processPerformanceData},
+        freshness_checks_enabled = #{nagiosHosts.freshnessChecksEnabled},
+        freshness_threshold = #{nagiosHosts.freshnessThreshold},
+        passive_checks_enabled = #{nagiosHosts.passiveChecksEnabled},
+        event_handler_enabled = #{nagiosHosts.eventHandlerEnabled},
+        active_checks_enabled = #{nagiosHosts.activeChecksEnabled},
+        retain_status_information = #{nagiosHosts.retainStatusInformation},
+        retain_nonstatus_information = #{nagiosHosts.retainNonstatusInformation},
+        notifications_enabled = #{nagiosHosts.notificationsEnabled},
+        obsess_over_host = #{nagiosHosts.obsessOverHost},
+        failure_prediction_enabled = #{nagiosHosts.failurePredictionEnabled},
+        notes = #{nagiosHosts.notes},
+        notes_url = #{nagiosHosts.notesUrl},
+        action_url = #{nagiosHosts.actionUrl},
+        icon_image = #{nagiosHosts.iconImage},
+        icon_image_alt = #{nagiosHosts.iconImageAlt},
+        vrml_image = #{nagiosHosts.vrmlImage},
+        statusmap_image = #{nagiosHosts.statusmapImage},
+        have_2d_coords = #{nagiosHosts.have2dCoords},
+        x_2d = #{nagiosHosts.x2d},
+        y_2d = #{nagiosHosts.y2d},
+        have_3d_coords = #{nagiosHosts.have3dCoords},
+        x_3d = #{nagiosHosts.x3d},
+        y_3d = #{nagiosHosts.y3d},
+        z_3d = #{nagiosHosts.z3d},
+        config_type = #{nagiosHosts.configType},
+        host_object_id = #{nagiosHosts.hostObjectId},
+        UpdateTime = NOW()
+        WHERE `id` = #{nagiosHosts.id}
+    </update>
+
+
+    <select id="getHost" parameterType="java.util.Map" resultMap="NagiosHosts">
+        SELECT <include refid="Base_Column_List" />
+        FROM nagios_hosts
+        WHERE `host_id` = #{id}
+    </select>
+    <select id="listAllHosts" parameterType="java.util.Map" resultMap="NagiosHosts">
+        SELECT <include refid="Base_Column_List" />
+        FROM nagios_hosts
+    </select>
+
+</mapper>
+
