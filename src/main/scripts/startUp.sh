@@ -1,0 +1,1 @@
+nohup  /usr/local/jdk1.6.0_24/bin/java -jar nagios-1.0-SNAPSHOT.jar >/dev/null 2>&1 &

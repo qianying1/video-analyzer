@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gzsendi.mapper.nagios.HostCheckMapper">
+
+    <resultMap id="NagiosHostchecks" type="cn.gzsendi.model.nagios.NagiosHostCheck">
+        <result column="hostcheck_id" property="hostCheckId"/>
+        <result column="instance_id" property="instanceId"/>
+        <result column="host_object_id" property="hostObjectId"/>
+        <result column="check_type" property="checkType"/>
+        <result column="is_raw_check" property="isRawCheck"/>
+        <result column="current_check_attempt" property="currentCheckAttempt"/>
+        <result column="max_check_attempts" property="maxCheckAttempts"/>
+        <result column="state" property="state"/>
+        <result column="state_type" property="stateType"/>
+        <result column="start_time" property="startTime"/>
+        <result column="start_time_usec" property="startTimeUsec"/>
+        <result column="end_time" property="endTime"/>
+        <result column="end_time_usec" property="endTimeUsec"/>
+        <result column="command_object_id" property="commandObjectId"/>
+        <result column="command_args" property="commandArgs"/>
+        <result column="command_line" property="commandLine"/>
+        <result column="timeout" property="timeout"/>
+        <result column="early_timeout" property="earlyTimeout"/>
+        <result column="execution_time" property="executionTime"/>
+        <result column="latency" property="latency"/>
+        <result column="return_code" property="returnCode"/>
+        <result column="output" property="output"/>
+        <result column="long_output" property="longOutput"/>
+        <result column="perfdata" property="perfdata"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        `hostcheck_id`,
+        `instance_id`,
+        `host_object_id`,
+        `check_type`,
+        `is_raw_check`,
+        `current_check_attempt`,
+        `max_check_attempts`,
+        `state`,
+        `state_type`,
+        `start_time`,
+        `start_time_usec`,
+        `end_time`,
+        `end_time_usec`,
+        `command_object_id`,
+        `command_args`,
+        `command_line`,
+        `timeout`,
+        `early_timeout`,
+        `execution_time`,
+        `latency`,
+        `return_code`,
+        `output`,
+        `long_output`,
+        `perfdata`
+    </sql>
+
+    <insert id="insert" parameterType="java.util.Map">
+        INSERT INTO nagios_hostchecks (
+        `hostcheck_id`,
+        `instance_id`,
+        `host_object_id`,
+        `check_type`,
+        `is_raw_check`,
+        `current_check_attempt`,
+        `max_check_attempts`,
+        `state`,
+        `state_type`,
+        `start_time`,
+        `start_time_usec`,
+        `end_time`,
+        `end_time_usec`,
+        `command_object_id`,
+        `command_args`,
+        `command_line`,
+        `timeout`,
+        `early_timeout`,
+        `execution_time`,
+        `latency`,
+        `return_code`,
+        `output`,
+        `long_output`,
+        `perfdata`
+        )
+        VALUES(
+        #{nagiosHostchecks.hostcheckId},
+        #{nagiosHostchecks.instanceId},
+        #{nagiosHostchecks.hostObjectId},
+        #{nagiosHostchecks.checkType},
+        #{nagiosHostchecks.isRawCheck},
+        #{nagiosHostchecks.currentCheckAttempt},
+        #{nagiosHostchecks.maxCheckAttempts},
+        #{nagiosHostchecks.state},
+        #{nagiosHostchecks.stateType},
+        #{nagiosHostchecks.startTime},
+        #{nagiosHostchecks.startTimeUsec},
+        #{nagiosHostchecks.endTime},
+        #{nagiosHostchecks.endTimeUsec},
+        #{nagiosHostchecks.commandObjectId},
+        #{nagiosHostchecks.commandArgs},
+        #{nagiosHostchecks.commandLine},
+        #{nagiosHostchecks.timeout},
+        #{nagiosHostchecks.earlyTimeout},
+        #{nagiosHostchecks.executionTime},
+        #{nagiosHostchecks.latency},
+        #{nagiosHostchecks.returnCode},
+        #{nagiosHostchecks.output},
+        #{nagiosHostchecks.longOutput},
+        #{nagiosHostchecks.perfdata}
+        )
+    </insert>
+
+    <delete id="delete" parameterType="java.util.Map">
+        DELETE FROM nagios_hostchecks
+        WHERE `id` = #{id}
+    </delete>
+
+    <update id="update" parameterType="java.util.Map">
+        UPDATE nagios_hostchecks
+        SET
+        hostcheck_id = #{nagiosHostchecks.hostcheckId},
+        instance_id = #{nagiosHostchecks.instanceId},
+        host_object_id = #{nagiosHostchecks.hostObjectId},
+        check_type = #{nagiosHostchecks.checkType},
+        is_raw_check = #{nagiosHostchecks.isRawCheck},
+        current_check_attempt = #{nagiosHostchecks.currentCheckAttempt},
+        max_check_attempts = #{nagiosHostchecks.maxCheckAttempts},
+        state = #{nagiosHostchecks.state},
+        state_type = #{nagiosHostchecks.stateType},
+        start_time = #{nagiosHostchecks.startTime},
+        start_time_usec = #{nagiosHostchecks.startTimeUsec},
+        end_time = #{nagiosHostchecks.endTime},
+        end_time_usec = #{nagiosHostchecks.endTimeUsec},
+        command_object_id = #{nagiosHostchecks.commandObjectId},
+        command_args = #{nagiosHostchecks.commandArgs},
+        command_line = #{nagiosHostchecks.commandLine},
+        timeout = #{nagiosHostchecks.timeout},
+        early_timeout = #{nagiosHostchecks.earlyTimeout},
+        execution_time = #{nagiosHostchecks.executionTime},
+        latency = #{nagiosHostchecks.latency},
+        return_code = #{nagiosHostchecks.returnCode},
+        output = #{nagiosHostchecks.output},
+        long_output = #{nagiosHostchecks.longOutput},
+        perfdata = #{nagiosHostchecks.perfdata},
+        UpdateTime = NOW()
+        WHERE `id` = #{nagiosHostchecks.id}
+    </update>
+
+
+    <select id="listHostChecks" parameterType="java.util.Map" resultMap="NagiosHostchecks">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM nagios_hostchecks
+    </select>
+    <select id="listHostChecksByDate" resultMap="NagiosHostchecks">
+        SELECT <include refid="Base_Column_List" />
+        FROM nagios_hostchecks
+        <![CDATA[
+        WHERE end_time > #{beginDate} AND end_time < #{endDate}
+        ]]>
+
+    </select>
+
+</mapper>

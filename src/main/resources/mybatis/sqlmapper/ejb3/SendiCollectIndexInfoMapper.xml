@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gzsendi.mapper.ejb3.SendiCollectIndexMapper">
+
+    <resultMap id="Collectindex" type="cn.gzsendi.model.sendi.SendiCollectIndex" >
+        <result column="id" property="id" />
+        <result column="name_en" property="nameEn" />
+        <result column="name_zh" property="nameZh" />
+        <result column="bigtemplate" property="bigtemplate" />
+        <result column="analysetype" property="analysetype" />
+        <result column="sortindex" property="sortindex" />
+        <result column="unit" property="unit" />
+        <result column="zyjhonly" property="zyjhonly" />
+        <result column="maker" property="maker" />
+        <result column="modifytime" property="modifytime" />
+        <result column="visibility" property="visibility" />
+        <result column="page" property="page" />
+        <result column="templates" property="templates" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        `id`,
+        `name_en`,
+        `name_zh`,
+        `bigtemplate`,
+        `analysetype`,
+        `sortindex`,
+        `unit`,
+        `zyjhonly`,
+        `maker`,
+        `modifytime`,
+        `visibility`,
+        `page`,
+        `templates`
+    </sql>
+
+    <insert id="insertCollectIndex" parameterType="java.util.Map" >
+        INSERT INTO collectindex (
+        `id`,
+        `name_en`,
+        `name_zh`,
+        `bigtemplate`,
+        `analysetype`,
+        `sortindex`,
+        `unit`,
+        `zyjhonly`,
+        `maker`,
+        `modifytime`,
+        `visibility`,
+        `page`,
+        `templates`
+        )
+        VALUES(
+        #{collectindex.id},
+        #{collectindex.nameEn},
+        #{collectindex.nameZh},
+        #{collectindex.bigtemplate},
+        #{collectindex.analysetype},
+        #{collectindex.sortindex},
+        #{collectindex.unit},
+        #{collectindex.zyjhonly},
+        #{collectindex.maker},
+        #{collectindex.modifytime},
+        #{collectindex.visibility},
+        #{collectindex.page},
+        #{collectindex.templates}
+        )
+    </insert>
+
+    <delete id="deleteCollectIndex" parameterType="java.util.Map" >
+        DELETE FROM collectindex
+        WHERE `id` = #{id}
+    </delete>
+
+    <update id="updateCollectIndex" parameterType="java.util.Map" >
+        UPDATE collectindex
+        SET
+        id = #{collectindex.id},
+        name_en = #{collectindex.nameEn},
+        name_zh = #{collectindex.nameZh},
+        bigtemplate = #{collectindex.bigtemplate},
+        analysetype = #{collectindex.analysetype},
+        sortindex = #{collectindex.sortindex},
+        unit = #{collectindex.unit},
+        zyjhonly = #{collectindex.zyjhonly},
+        maker = #{collectindex.maker},
+        modifytime = #{collectindex.modifytime},
+        visibility = #{collectindex.visibility},
+        page = #{collectindex.page},
+        templates = #{collectindex.templates},
+        UpdateTime = NOW()
+        WHERE `id` = #{collectindex.id}
+    </update>
+
+
+    <select id="getCollectIndexById" parameterType="java.util.Map" resultMap="Collectindex">
+        SELECT <include refid="Base_Column_List" />
+        FROM collectindex
+        WHERE `id` = #{id}
+    </select>
+
+
+</mapper>
+

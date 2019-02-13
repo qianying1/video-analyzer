@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gzsendi.mapper.ejb3.SendiHostMapper">
+    <resultMap id="SendiHost" type="cn.gzsendi.model.sendi.SendiHost" >
+        <result column="id" property="id"/>
+        <result column="description" property="description"/>
+        <result column="hostname" property="hostname"/>
+        <result column="system" property="system"/>
+        <result column="template" property="template"/>
+        <result column="applicationmodel" property="applicationmodel"/>
+        <result column="business" property="business"/>
+        <result column="cabinetsmark" property="cabinetsmark"/>
+        <result column="dbtype" property="dbtype"/>
+        <result column="devicetype" property="devicetype"/>
+        <result column="location" property="location"/>
+        <result column="platform" property="platform"/>
+        <result column="platform_network" property="platform_network"/>
+        <result column="maintenanceunit" property="maintenanceunit"/>
+        <result column="branch_id" property="branch_id"/>
+        <result column="status" property="status"/>
+        <result column="icon_x" property="icon_x"/>
+        <result column="icon_y" property="icon_y"/>
+        <result column="disabled" property="disabled"/>
+        <result column="netip" property="netip"/>
+        <result column="weibaohost_id" property="weibaohost_id"/>
+        <result column="filter" property="filter"/>
+        <result column="importantlevel" property="importantlevel"/>
+        <result column="cactiid" property="cactiid"/>
+        <result column="bigtemplate" property="bigtemplate"/>
+        <result column="realhostid" property="realhostid"/>
+        <result column="lastmodifytime" property="lastmodifytime"/>
+        <result column="vcenter" property="vcenter"/>
+        <result column="vmid" property="vmid"/>
+        <result column="lastModifyDate" property="lastModifyDate"/>
+        <result column="nextModifyDate" property="nextModifyDate"/>
+        <result column="modifyResult" property="modifyResult"/>
+        <result column="modifyPeriod" property="modifyPeriod"/>
+        <result column="warningpasswordday" property="warningpasswordday"/>
+        <result column="isAuto" property="isAuto"/>
+        <result column="beforeModifypassword" property="beforeModifypassword"/>
+        <result column="platform_id" property="platform_id"/>
+        <result column="outSystemId" property="outSystemId"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        `id`,
+        `description`,
+        `hostname`,
+        `system`,
+        `template`,
+        `applicationmodel`,
+        `business`,
+        `cabinetsmark`,
+        `dbtype`,
+        `devicetype`,
+        `location`,
+        `platform`,
+        `platform_network`,
+        `maintenanceunit`,
+        <!--`branch_id`,-->
+        `status`,
+        `icon_x`,
+        `icon_y`,
+        `disabled`,
+        `netip`,
+        <!--`weibaohost_id`,-->
+        `filter`,
+        `importantlevel`,
+        `cactiid`,
+        `bigtemplate`,
+        `realhostid`,
+        `lastmodifytime`,
+        `vcenter`,
+        `vmid`,
+        `lastModifyDate`,
+        `nextModifyDate`,
+        `modifyResult`,
+        `modifyPeriod`,
+        `warningpasswordday`,
+        `isAuto`,
+        `beforeModifypassword`,
+        `platform_id`,
+        `outSystemId`
+    </sql>
+
+    <insert id="insertHost" parameterType="cn.gzsendi.model.sendi.SendiHost" >
+        INSERT INTO host (
+        `id`,
+        `description`,
+        `hostname`,
+        `system`,
+        `template`,
+        `applicationmodel`,
+        `business`,
+        `cabinetsmark`,
+        `dbtype`,
+        `devicetype`,
+        `location`,
+        `platform`,
+        `platform_network`,
+        `maintenanceunit`,
+        <!--`branch_id`,-->
+        `status`,
+        `icon_x`,
+        `icon_y`,
+        `disabled`,
+        `netip`,
+        <!--`weibaohost_id`,-->
+        `filter`,
+        `importantlevel`,
+        `cactiid`,
+        `bigtemplate`,
+        `realhostid`,
+        `lastmodifytime`,
+        `vcenter`,
+        `vmid`,
+        `lastModifyDate`,
+        `nextModifyDate`,
+        `modifyResult`,
+        `modifyPeriod`,
+        `warningpasswordday`,
+        `isAuto`,
+        `beforeModifypassword`,
+        `platform_id`,
+        `outSystemId`
+        )
+        select
+        #{sendiHost.id},
+        #{sendiHost.description},
+        #{sendiHost.hostname},
+        #{sendiHost.system},
+        #{sendiHost.template},
+        #{sendiHost.applicationmodel},
+        #{sendiHost.business},
+        #{sendiHost.cabinetsmark},
+        #{sendiHost.dbtype},
+        #{sendiHost.devicetype},
+        #{sendiHost.location},
+        #{sendiHost.platform},
+        #{sendiHost.platform_network},
+        #{sendiHost.maintenanceunit},
+        <!--#{sendiHost.branch_id},-->
+        #{sendiHost.status},
+        #{sendiHost.icon_x},
+        #{sendiHost.icon_y},
+        #{sendiHost.disabled},
+        #{sendiHost.netip},
+        <!--#{sendiHost.weibaohost_id},-->
+        #{sendiHost.filter},
+        #{sendiHost.importantlevel},
+        #{sendiHost.cactiid},
+        #{sendiHost.bigtemplate},
+        #{sendiHost.realhostid},
+        #{sendiHost.lastmodifytime},
+        #{sendiHost.vcenter},
+        #{sendiHost.vmid},
+        #{sendiHost.lastModifyDate},
+        #{sendiHost.nextModifyDate},
+        #{sendiHost.modifyResult},
+        #{sendiHost.modifyPeriod},
+        #{sendiHost.warningpasswordday},
+        #{sendiHost.isAuto},
+        #{sendiHost.beforeModifypassword},
+        #{sendiHost.platform_id},
+        #{sendiHost.outSystemId}
+        FROM dual
+        WHERE NOT EXISTS(SELECT * FROM host WHERE outSystemId = #{sendiHost.outSystemId})
+    </insert>
+
+    <delete id="deleteHost" parameterType="java.util.Map" >
+        DELETE FROM host
+        WHERE `id` = #{id}
+    </delete>
+
+    <update id="updateHost" parameterType="java.util.Map" >
+        UPDATE host
+        SET
+            id=#{sendiHost.id},
+            description=#{sendiHost.description},
+            hostname=#{sendiHost.hostname},
+            system=#{sendiHost.system},
+            template=#{sendiHost.template},
+            applicationmodel=#{sendiHost.applicationmodel},
+            business=#{sendiHost.business},
+            cabinetsmark=#{sendiHost.cabinetsmark},
+            dbtype=#{sendiHost.dbtype},
+            devicetype=#{sendiHost.devicetype},
+            location=#{sendiHost.location},
+            platform=#{sendiHost.platform},
+            platform_network=#{sendiHost.platform_network},
+            maintenanceunit=#{sendiHost.maintenanceunit},
+            <!--branch_id=#{sendiHost.branch_id},-->
+            status=#{sendiHost.status},
+            icon_x=#{sendiHost.icon_x},
+            icon_y=#{sendiHost.icon_y},
+            disabled=#{sendiHost.disabled},
+            netip=#{sendiHost.netip},
+            <!--weibaohost_id=#{sendiHost.weibaohost_id},-->
+            filter=#{sendiHost.filter},
+            importantlevel=#{sendiHost.importantlevel},
+            cactiid=#{sendiHost.cactiid},
+            bigtemplate=#{sendiHost.bigtemplate},
+            realhostid=#{sendiHost.realhostid},
+            lastmodifytime=#{sendiHost.lastmodifytime},
+            vcenter=#{sendiHost.vcenter},
+            vmid=#{sendiHost.vmid},
+            lastModifyDate=#{sendiHost.lastModifyDate},
+            nextModifyDate=#{sendiHost.nextModifyDate},
+            modifyResult=#{sendiHost.modifyResult},
+            modifyPeriod=#{sendiHost.modifyPeriod},
+            warningpasswordday=#{sendiHost.warningpasswordday},
+            isAuto=#{sendiHost.isAuto},
+            beforeModifypassword=#{sendiHost.beforeModifypassword},
+            platform_id=#{sendiHost.platform_id},
+            outSystemId=#{sendiHost.outSystemId}
+        WHERE
+            `id` = #{sendiHost.id}
+    </update>
+
+
+    <select id="getHost" parameterType="java.util.Map" resultMap="SendiHost">
+        SELECT <include refid="Base_Column_List" />
+        FROM host
+        WHERE `id` = #{id}
+    </select>
+
+    <select id="listAllHosts" parameterType="java.util.Map" resultMap="SendiHost">
+        SELECT <include refid="Base_Column_List" />
+        FROM host
+    </select>
+
+</mapper>
+
