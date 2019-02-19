@@ -6,8 +6,6 @@
 import threading
 import sys
 import MySQLdb
-
-sys.path.append("../..")
 from common.CrawUrlQueue import *
 
 
@@ -34,3 +32,4 @@ class UrlPersistenceTask(threading.Thread):
     '''
 
     def persistence(self):
+        print 'test'

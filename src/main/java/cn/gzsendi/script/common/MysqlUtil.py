@@ -27,6 +27,7 @@ class MysqlUtil:
     charset = 'utf8'
 
     def __init__(self):
+        print 'MysqlUtil init begin ...... '
         global DB_POOL
         if DB_POOL is None:
             DB_POOL = Queue.Queue()
@@ -67,7 +68,7 @@ class MysqlUtil:
                                      charset=charset)  # 5为连接池里的最少连接数
 
     '''
-    获取数据库连接
+    获取数据库连接后的句柄
     '''
 
     @staticmethod
@@ -80,19 +81,32 @@ class MysqlUtil:
         return MysqlUtil.DB_POOL.connection().cursor()
 
     '''
+    获取数据库连接
+    '''
+
+    @staticmethod
+    def get_db_conn():
+        if MysqlUtil.DB_POOL is None:
+            MysqlUtil.init_db_connects(MysqlUtil.host, MysqlUtil.port, MysqlUtil.username, MysqlUtil.password,
+                                       MysqlUtil.db,
+                                       MysqlUtil.count, MysqlUtil.charset)
+            return MysqlUtil.DB_POOL.connection().cursor(cursor=pymysql.cursors.DictCursor)
+        return MysqlUtil.DB_POOL.connection()
+
+    '''
     关闭当前db数据库连接
     :param db 需要进行释放的数据库连接
     '''
 
-    def close_db(self, db):
-        if db is not None:
-            try:
-                db.close()
-            except MySQLdb.MySQLError as e:
-                print e
-                return False
-            return True
-        return False
+    # def close_db(self, db):
+    #     if db is not None:
+    #         try:
+    #             db.close()
+    #         except MySQLdb.MySQLError as e:
+    #             print e
+    #             return False
+    #         return True
+    #     return False
 
 
 if __name__ == '__main__':

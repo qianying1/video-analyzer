@@ -5,7 +5,8 @@
 import enum
 
 
-class BrowserType(enum):
+class BrowserType(enum.Enum):
+
     '''
     谷歌浏览器
     '''

@@ -10,9 +10,8 @@ from selenium import webdriver
 
 import BrowserType
 
-sys.path.append("../../exceptions")
-sys.path.append("..")
-from exceptions import *
+from exceptions_ import NotJsonFormatParamsError
+from bs4 import BeautifulSoup
 
 
 class WebBrowser:
@@ -23,11 +22,27 @@ class WebBrowser:
 
     def __init__(self, browser_location, browser_type, page_url, params=None):
         self.init_headers(self)
-        self.init_local_driver(self, browser_location, browser_type, page_url)
+        # 初始化本地浏览器驱动
+        if browser_type is not None and browser_location is not None and browser_location.strip() != '':
+            if browser_type == BrowserType['CHROME']:
+                self.driver = webdriver.Chrome(browser_location)
+            elif browser_type == BrowserType['FIREFOX']:
+                self.driver = webdriver.Firefox(browser_location)
+            elif browser_type == BrowserType['EDGE']:
+                self.driver = webdriver.Edge(browser_location)
+            elif browser_type == BrowserType['IE']:
+                self.driver = webdriver.Ie(browser_location)
+            elif browser_type == BrowserType['OPERA']:
+                self.driver = webdriver.Opera(browser_location)
+            else:
+                self.driver = webdriver.Safari(browser_location)
+            if self.driver is not None and page_url is not None and page_url.strip() != '':
+                self.driver.get(page_url)
+        # self.init_local_driver(browser_location, browser_type, page_url)
         self.page_url = page_url
         try:
             json.loads(params, encoding="utf-8")
-        except NotJsonFormatError as e:
+        except NotJsonFormatParamsError as e:
             raise e
         self.params = params
         # self.driver = webdriver.Firefox(r'F://firefox')
@@ -60,7 +75,23 @@ class WebBrowser:
 
     def __init__(self, browser_location, browser_type, page_url, **params):
         self.init_headers(self)
-        self.init_local_driver(self, browser_location, browser_type, page_url)
+        # self.init_local_driver(browser_location, browser_type, page_url)
+        # 初始化本地浏览器驱动
+        if browser_type is not None and browser_location is not None and browser_location.strip() != '':
+            if browser_type == BrowserType.BrowserType.GHROME:
+                self.driver = webdriver.Chrome(browser_location)
+            elif browser_type == BrowserType.BrowserType.FIREFOX:
+                self.driver = webdriver.Firefox(browser_location)
+            elif browser_type == BrowserType.BrowserType.EDGE:
+                self.driver = webdriver.Edge(browser_location)
+            elif browser_type == BrowserType.BrowserType.IE:
+                self.driver = webdriver.Ie(browser_location)
+            elif browser_type == BrowserType.BrowserType.OPERA:
+                self.driver = webdriver.Opera(browser_location)
+            else:
+                self.driver = webdriver.Safari(browser_location)
+            if self.driver is not None and page_url is not None and page_url.strip() != '':
+                self.driver.get(page_url)
         if params.items().__len__() >= 1:
             self.params = params
         self.page_url = page_url
@@ -72,22 +103,7 @@ class WebBrowser:
     :param index_page 浏览器打开的第一个页面http地址
     '''
 
-    def init_local_driver(self, obj, browser_location, browser_type, index_page):
-        if browser_type is BrowserType and browser_location is not None and browser_location.strip() != '':
-            if browser_type == BrowserType['CHROME']:
-                obj.driver = webdriver.Chrome(browser_location)
-            elif browser_type == BrowserType['FIREFOX']:
-                obj.driver = webdriver.Firefox(browser_location)
-            elif browser_type == BrowserType['EDGE']:
-                obj.driver = webdriver.Edge(browser_location)
-            elif browser_type == BrowserType['IE']:
-                obj.driver = webdriver.Ie(browser_location)
-            elif browser_type == BrowserType['OPERA']:
-                obj.driver = webdriver.Opera(browser_location)
-            else:
-                obj.driver = webdriver.Safari(browser_location)
-            if self.driver is not None and index_page is not None and index_page.strip() != '':
-                self.driver.get(index_page)
+    # def init_local_driver(self, browser_location, browser_type, index_page):
 
     '''
     设置请求头中的referer访问者地址参数值
@@ -125,3 +141,14 @@ class WebBrowser:
         if page_url is not None:
             self.driver.get(page_url)
         return self.driver
+
+    '''
+    通过浏览器驱动获取一个特定的页面的soup
+    '''
+
+    @staticmethod
+    def get_special_page_soup(driver):
+        if driver is None:
+            return None
+        # html.parser Python标准库
+        return BeautifulSoup(driver.page_source, "lxml-xml")
