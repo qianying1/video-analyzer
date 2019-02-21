@@ -2,124 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cf6d3b3-9232-4910-935d-7968e8ec05fb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/BilibiliMain.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/AdvertAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/AnimationAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/DanceAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/DigitAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/EntertainAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/FashionAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/FilmTelevAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/FolkOperaAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/GameAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/LifeAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/MusicAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/NationInnovationAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/OtomadAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/ScienceTecAnalyzerThread.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/VideoHallAnalyzerThread.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_1_5_8_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/controller/video/VideoController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/service/bilibili/VideoGetterService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/service/bilibili/VideoGetterServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/db.properties" afterPath="$PROJECT_DIR$/src/main/db.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/CrawlerMain.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/IndexAnalyzerThread.py" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/IndexAnalyzerThread.py" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/geckodriver.log" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/geckodriver.log" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/task/UrlPersistenceTask.py" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/task/UrlPersistenceTask.py" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/common/BrowserType.py" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/common/BrowserType.py" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/common/MysqlUtil.py" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/common/MysqlUtil.py" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/common/WebBrowser.py" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/common/WebBrowser.py" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/common/__init__.py" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/common/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/exceptions/NotJsonFormatParamsError.py" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/exceptions_/NotJsonFormatParamsError.py" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/exceptions/__init__.py" afterPath="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/exceptions_/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-bakup.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties_pro" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/application-bak.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/keystore.p12" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/sqlmapper/ejb3/NagiosDataAnalyzeRuleMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/sqlmapper/ejb3/SendiCollectIndexInfoMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/sqlmapper/ejb3/SendiHostMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/sqlmapper/nagios/NagiosHostCheckMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/sqlmapper/nagios/NagiosHostMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/sqlmapper/nagios/NagiosServiceCheckMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/runtimeCache.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login-error.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/aspectjweaver-1.8.11.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/classmate-1.3.4.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/commons-collections-3.1.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/commons-pool2-2.4.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/druid-1.1.10.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/fastjson-1.2.41.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/hibernate-validator-5.3.5.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/jackson-annotations-2.8.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/jackson-core-2.8.10.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/jackson-databind-2.8.10.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/jboss-logging-3.3.1.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/jcl-over-slf4j-1.7.25.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/jedis-2.9.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/jul-to-slf4j-1.7.25.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/log4j-1.2.16.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/lombok-1.16.22.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/mybatis-3.4.6.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/mybatis-spring-1.3.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/mybatis-spring-boot-autoconfigure-1.3.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/mybatis-spring-boot-starter-1.3.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/mysql-connector-java-5.1.44.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/slf4j-api-1.7.25.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/slf4j-log4j12-1.7.25.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/snakeyaml-1.17.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-aop-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-beans-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-1.5.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-autoconfigure-1.5.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-1.5.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-aop-1.5.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-cache-1.5.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-data-redis-1.5.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-jdbc-1.5.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-log4j-1.3.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-tomcat-1.5.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-boot-starter-web-1.5.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-context-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-context-support-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-core-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-data-commons-1.13.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-data-keyvalue-1.2.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-data-redis-1.8.8.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-expression-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-jdbc-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-oxm-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-tx-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-web-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/spring-webmvc-4.3.12.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/tomcat-embed-core-7.0.59.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/tomcat-embed-el-7.0.59.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/tomcat-embed-websocket-7.0.59.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/tomcat-jdbc-7.0.59.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/tomcat-juli-7.0.59.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/lib/validation-api-1.1.0.Final.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/nagios-1.0-SNAPSHOT.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/application.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/application.properties_pro" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/config/application.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/log4j.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/mybatis/mybatis-config.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/mybatis/sqlmapper/ejb3/NagiosDataAnalyzeRuleMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/mybatis/sqlmapper/ejb3/SendiCollectIndexInfoMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/mybatis/sqlmapper/ejb3/SendiHostMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/mybatis/sqlmapper/nagios/NagiosHostCheckMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/mybatis/sqlmapper/nagios/NagiosHostMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/mybatis/sqlmapper/nagios/NagiosServiceCheckMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/nagios-1.0-SNAPSHOT.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/resources/runtimeCache.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/gzsendi/service/bilibili/TestServiceTest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/video-analyzer.iml" afterPath="$PROJECT_DIR$/src/main/video-analyzer.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -141,18 +30,18 @@
       <file leaf-file-name="BilibiliMain.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/BilibiliMain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            <state relative-caret-position="0">
+              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexAnalyzerThread.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexAnalyzerThread.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/IndexAnalyzerThread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="94" column="110" lean-forward="true" selection-start-line="94" selection-start-column="110" selection-end-line="94" selection-end-column="110" />
+            <state relative-caret-position="35">
+              <caret line="96" column="32" lean-forward="false" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
               <folding>
                 <marker date="1550556448625" expanded="true" signature="12150:12172" ph="select * fro... device" />
                 <marker date="1550556448625" expanded="true" signature="12150:12194" ph="select * fro... bilibli_type" />
@@ -168,6 +57,48 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="VideoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/controller/video/VideoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoGetterService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/service/bilibili/VideoGetterService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoGetterServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/service/bilibili/VideoGetterServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="73" column="20" lean-forward="true" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -178,8 +109,8 @@
         <option value="Interface" />
         <option value="HTML File" />
         <option value="BpmnFile" />
-        <option value="Class" />
         <option value="Python Script" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -233,15 +164,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/controller/user/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/controller/security/SysAuthenticationProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/service/security/AuthenticationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/config/security/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/service/security/PermissionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/controller/acivity/UserActivityController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/model/security/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/service/bilibili/IndexCrawlServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/task/bilibili/CrawlerTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/service/bilibili/IndexCrawlService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/common/SoupUtil.py" />
@@ -284,6 +210,11 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/IndexCrawler.py" />
         <option value="$USER_HOME$/Desktop/JKConfigList.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/IndexAnalyzerThread.py" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/controller/video/VideoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/service/bilibili/VideoGetter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/service/bilibili/VideoGetterService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/gzsendi/service/bilibili/VideoGetterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -322,9 +253,9 @@
     <option name="jreName" value="1.6" />
     <option name="vmOptions" value="-Dmaven.multiModuleProjectDirectory=$M2_HOME" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="92" />
-    <option name="y" value="13" />
+    <option name="x" value="75" />
     <option name="width" value="1803" />
     <option name="height" value="1038" />
   </component>
@@ -344,8 +275,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -386,7 +318,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gzsendi" type="462c0819:PsiDirectoryNode" />
-              <item name="script" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="video-analyzer" type="b2602c69:ProjectViewProjectNode" />
@@ -395,8 +327,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gzsendi" type="462c0819:PsiDirectoryNode" />
-              <item name="script" type="462c0819:PsiDirectoryNode" />
-              <item name="bilibili" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="acivity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="video-analyzer" type="b2602c69:ProjectViewProjectNode" />
@@ -405,9 +337,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gzsendi" type="462c0819:PsiDirectoryNode" />
-              <item name="script" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="security" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="video-analyzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="video-analyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gzsendi" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="video-analyzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="video-analyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gzsendi" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="bilibili" type="462c0819:PsiDirectoryNode" />
-              <item name="analizer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="video-analyzer" type="b2602c69:ProjectViewProjectNode" />
@@ -439,8 +389,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -887,6 +836,7 @@
       <workItem from="1550484874979" duration="157000" />
       <workItem from="1550492950922" duration="4202000" />
       <workItem from="1550538872553" duration="6758000" />
+      <workItem from="1550637616351" duration="2165000" />
     </task>
     <servers />
   </component>
@@ -923,7 +873,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168448000" />
+    <option name="totallyTimeSpent" value="170613000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -935,7 +885,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="92" y="13" width="1803" height="1038" extended-state="0" />
+    <frame x="75" y="0" width="1803" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -957,7 +907,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4140715" sideWeight="0.4960116" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19317524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19259688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2708559" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1008,49 +958,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.IntelliJIdea2017.3/system/python_stubs/460294867/thread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2100">
-          <caret line="159" column="72" lean-forward="true" selection-start-line="159" selection-start-column="72" selection-end-line="159" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/python27/Lib/Queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/python27/Lib/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="140" column="15" lean-forward="false" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/db.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/python27/Lib/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="470" column="0" lean-forward="false" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/python27/Lib/site-packages/DBUtils/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1135,7 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,7 +1208,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5543">
           <caret line="241" column="0" lean-forward="false" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1325,9 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
           <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
-          <folding>
-            <element signature="e#56#66#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1335,7 +1237,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="851">
           <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1361,7 +1262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="73" column="60" lean-forward="true" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,14 +1269,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="78" column="80" lean-forward="true" selection-start-line="78" selection-start-column="80" selection-end-line="78" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/BilibiliMain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1391,8 +1290,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/script/bilibili/analizer/IndexAnalyzerThread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="94" column="110" lean-forward="true" selection-start-line="94" selection-start-column="110" selection-end-line="94" selection-end-column="110" />
+        <state relative-caret-position="35">
+          <caret line="96" column="32" lean-forward="false" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
           <folding>
             <marker date="1550556448625" expanded="true" signature="12150:12172" ph="select * fro... device" />
             <marker date="1550556448625" expanded="true" signature="12150:12194" ph="select * fro... bilibli_type" />
@@ -1404,6 +1303,56 @@
             <marker date="1550556448625" expanded="true" signature="12553:12634" ph="select id fr... video_type" />
             <marker date="1550556448625" expanded="true" signature="12623:12634" ph="select id fr... video_type" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/controller/security/SysAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/controller/acivity/UserActivityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/controller/video/VideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/service/bilibili/VideoGetterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gzsendi/service/bilibili/VideoGetterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="73" column="20" lean-forward="true" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
